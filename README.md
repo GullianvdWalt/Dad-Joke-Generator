@@ -1,4 +1,8 @@
-# dad-joke-generator
+# Dad Joke Generator
+
+## Description
+Vue.js application build while following Erik Hanchett.
+Build to help me understand how Vuex works.
 
 ## Project setup
 ```
