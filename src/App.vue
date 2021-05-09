@@ -1,56 +1,40 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-app-bar color="teal lighten-1" text-color="white" dense app>
+      <v-icon color="white" class="mx-3">mdi-vuetify</v-icon>
+       <v-toolbar-title class="ml-2" style="color: white;">Dad Joke Generator</v-toolbar-title>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
 
-      <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+        <Home/>
+<!--        &lt;!&ndash; If using vue-router &ndash;&gt;-->
+<!--        <router-view></router-view>-->
+      </v-container>
     </v-main>
+    <v-footer color="teal lighten-1" app>
+      <v-row justify="center" no-gutters>
+        <v-col
+            class="teal lighten-1 py-4 text-center white--text"
+            cols="12">
+          {{ new Date().getFullYear() }} — <strong>Gullian Van Der Walt</strong>
+        </v-col>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Home from "@/components/Home";
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Home,
   },
 
   data: () => ({
