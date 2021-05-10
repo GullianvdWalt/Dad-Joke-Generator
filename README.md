@@ -4,6 +4,11 @@
 Vue.js application build while following Erik Hanchett.
 Build to help me understand how Vuex works.
 
+## Technologies Used
+* Vue.js
+* Vuetify
+* Vuex
+
 ## Project setup
 ```
 npm install
