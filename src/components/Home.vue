@@ -29,26 +29,22 @@
 <script>
 import Vue from 'vue';
 import Vuetify from 'vuetify';
-// import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 Vue.use(Vuetify);
 export default {
   name: "Home",
   computed:{
-    joke(){
-      return this.$store.getters.getCurrentJoke;
-    }
-  },
-  data: () => ({
-    // joke: '',
-  }),
-  mounted() {
-    // this.joke = this.$store.getters.getCurrentJoke;
+    ... mapGetters({ joke: "getCurrentJoke" }),
+    // joke(){
+    //   return this.$store.getters.getCurrentJoke;
+    // }
   },
   methods: {
-    newJoke(){
-      // Trigger store to get new joke
-      this.$store.dispatch("setCurrentJoke");
-    }
+    ... mapActions({ newJoke: "setCurrentJoke" }),
+    // newJoke(){
+    //   // Trigger store to get new joke
+    //   this.setCurrentJoke();
+    // }
   }
 }
 </script>

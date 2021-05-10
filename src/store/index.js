@@ -13,7 +13,7 @@ export default new Vuex.Store({
         allJokes: []
     },
     mutations: { // Synchronous
-        setCurrentJoke(state, payload){
+        setCurrentJoke(state, payload) {
             state.currentJoke = payload;
             state.allJokes.push(payload);
         }

@@ -40,12 +40,14 @@
 </template>
 
 <script>
-
-
+import { mapActions } from 'vuex';
 export default {
   name: 'App',
   mounted() {
-    this.$store.dispatch("setCurrentJoke");
+    this.setCurrentJoke();
+  },
+  methods: {
+    ... mapActions(['setCurrentJoke'])
   }
 };
 </script>
