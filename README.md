@@ -1,3 +1,5 @@
+![Screenshot](./public/Dad%20Joke%20Generat.png)
+
 # Dad Joke Generator
 
 ## Description
